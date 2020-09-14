@@ -7,23 +7,28 @@
 script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
 
 [node name="World" type="YSort" parent="."]
 
 [node name="Block4" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 16, 32 )
+position = Vector2( 128, 80 )
 
 [node name="Block" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 32, 32 )
+position = Vector2( 144, 80 )
 
 [node name="Block2" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 16, 48 )
+position = Vector2( 112, 80 )
+blockType = "Corn"
 
 [node name="Block3" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 48, 16 )
+position = Vector2( 144, 96 )
 
 [node name="Block5" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 48, 32 )
+position = Vector2( 128, 64 )
 
 [node name="Block6" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 64, 32 )
+position = Vector2( 160, 64 )
+
+[node name="Main" type="TileMap" parent="."]
+format = 1
