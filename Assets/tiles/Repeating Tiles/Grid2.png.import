@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Lava.png-f315e6b968cfc6237669204d8b48d58b.stex"
+path="res://.import/Grid2.png-c72efe0bde8f549ddd60406590ead925.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tiles/Lava.png"
-dest_files=[ "res://.import/Lava.png-f315e6b968cfc6237669204d8b48d58b.stex" ]
+source_file="res://Assets/tiles/Repeating Tiles/Grid2.png"
+dest_files=[ "res://.import/Grid2.png-c72efe0bde8f549ddd60406590ead925.stex" ]
 
 [params]
 
@@ -19,12 +19,12 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
