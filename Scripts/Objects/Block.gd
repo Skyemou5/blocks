@@ -10,8 +10,8 @@ func _change_sprite(sprite):
 	pass
 	
 func _process(delta):
-	if Engine.editor_hint:
-		getallnodes()
+	#if Engine.editor_hint:
+		#getallnodes()
 	pass
 
 func _loop_through_children(name):
