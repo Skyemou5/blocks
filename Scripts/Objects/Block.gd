@@ -11,7 +11,7 @@ func _change_sprite(sprite):
 	
 func _process(delta):
 	if Engine.editor_hint:
-		getallnodes(get_node())
+		getallnodes()
 	pass
 
 func _loop_through_children(name):
