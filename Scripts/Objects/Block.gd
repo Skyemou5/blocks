@@ -1,6 +1,7 @@
 tool
 extends Node2D
 
+
 export(String) var blockType:String = "Block"
 export(Texture) var blockSprite:Texture
 
@@ -10,6 +11,7 @@ func _change_sprite(sprite):
 	pass
 	
 func _process(delta):
+	
 	#if Engine.editor_hint:
 		#getallnodes()
 	pass

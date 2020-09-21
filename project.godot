@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "TurnQueue",
 "language": "GDScript",
 "path": "res://Scripts/TurnQueue.gd"
+}, {
+"base": "Node",
+"class": "math_tool",
+"language": "GDScript",
+"path": "res://Scripts/tools/math_tool_sc.gd"
 } ]
 _global_script_class_icons={
-"TurnQueue": ""
+"TurnQueue": "",
+"math_tool": ""
 }
 
 [application]

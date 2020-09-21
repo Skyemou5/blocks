@@ -34,7 +34,7 @@ position = Vector2( 176, 112 )
 blockType = "Corn"
 
 [node name="Block3" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 80, 32 )
+position = Vector2( 96, 32 )
 
 [node name="Block7" parent="World" instance=ExtResource( 1 )]
 position = Vector2( 64, 32 )
