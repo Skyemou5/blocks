@@ -1,10 +1,9 @@
-tool
 extends Node
 
 class_name math_tool
 
 export(float) onready var input : float
-export(Array) onready var numArr : Array = []
+export(Array, int) onready var numArr : Array = []
 
 
 func addVal(one: float,two: float):
@@ -35,10 +34,3 @@ static func div_array(arr: Array):
 		result /= element
 	return result
 
-func _process(delta):
-	# if Engine.editor_hint:
-		
-	# print(sum_array(numArr))
-	pass
-
-#print(addVal(4,4))

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dde2725-9e51-4b15-9964-162e3dcbe61b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block1.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Block1.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/Block.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Block.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/math_tool.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/math_tool.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Objects/Block.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Objects/Block.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/TurnQueue.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/tools/math_tool_sc.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/tools/math_tool_sc.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/World.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/World.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/default_env.tres" beforeDir="false" afterPath="$PROJECT_DIR$/default_env.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Scripts/Grid_Movement.gd" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="p4m1sgds" />
+  </component>
+  <component name="ProjectId" id="1htMuWEdlPbkO3lcpqnjZLr7KRz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dde2725-9e51-4b15-9964-162e3dcbe61b" name="Default Changelist" comment="" />
+      <created>1600826160162</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600826160162</updated>
+      <workItem from="1600826165195" duration="52000" />
+      <workItem from="1600826249990" duration="992000" />
+      <workItem from="1600830381168" duration="577000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="708" y="344" key="#Notifications" timestamp="1600826313524">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="708" y="344" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600826313524" />
+    <state x="552" y="161" key="#Plugins" timestamp="1600826285243">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="161" key="#Plugins/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600826285243" />
+    <state x="540" y="263" key="IDE.errors.dialog" timestamp="1600826307134">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="263" key="IDE.errors.dialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600826307134" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1600830074765">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600830074765" />
+  </component>
+</project>
