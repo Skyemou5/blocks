@@ -11,7 +11,8 @@ const LEFT : Vector2 = Vector2(-2,0)
 const MAX_SPEED = 400
 
 func _ready():
-	set_fixed_process(true)
+	#set_fixed_process(true)
+	pass
 
 func _fixed_process(delta):
 	var is_moving : bool = Input.is_action_pressed("move_up") or Input.is_action_pressed("move_down") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_up")
@@ -29,6 +30,6 @@ func _fixed_process(delta):
 	else:
 		speed = 0
 	
-	velocity = speed * dir * delta
+	#velocity = speed * dir * delta
 
-	move(velocity)
+	#move(velocity)
