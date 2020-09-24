@@ -10,30 +10,30 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
-"class": "TurnQueue",
+"class": "base_grid",
 "language": "GDScript",
-"path": "res://Scripts/TurnQueue.gd"
+"path": "res://Scripts/classes/base_grid.gd"
 }, {
 "base": "Node2D",
-"class": "button",
+"class": "base_obj",
 "language": "GDScript",
-"path": "res://Scripts/classes/button_class.gd"
+"path": "res://Scripts/Objects/base_obj.gd"
 }, {
 "base": "Node",
 "class": "math_tool",
 "language": "GDScript",
-"path": "res://Scripts/tools/math_tool_sc.gd"
+"path": "res://Scripts/Objects/math_tool_sc.gd"
 } ]
 _global_script_class_icons={
-"TurnQueue": "",
-"button": "",
+"base_grid": "",
+"base_obj": "",
 "math_tool": ""
 }
 
 [application]
 
 config/name="blocks"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Scenes/World.tscn"
 config/icon="res://icon.png"
 
 [display]

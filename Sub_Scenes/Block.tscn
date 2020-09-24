@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://Assets/Shaders/Outline.tres" type="Material" id=1]
 [ext_resource path="res://Scripts/Objects/Block.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sprites/shadow.png" type="Texture" id=3]
 
@@ -7,7 +8,10 @@
 extents = Vector2( 8, 8 )
 
 [node name="Block" type="Node2D"]
+material = ExtResource( 1 )
 script = ExtResource( 2 )
+blockType = "Block"
+blockSprite = null
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
@@ -21,6 +25,7 @@ texture = ExtResource( 3 )
 offset = Vector2( 8, 8 )
 
 [node name="Area2D" type="Area2D" parent="KinematicBody2D"]
+visible = false
 __meta__ = {
 "_edit_lock_": true
 }

@@ -8,10 +8,12 @@ export(Texture) onready var blockSprite:Texture
 onready var _get_spr_node = $KinematicBody2D/Block1
 
 func _ready():
+	#update when the game starts
 	if not Engine.editor_hint:
 		_get_spr_node.texture = blockSprite
 
 func _change_sprite(spr):
+	#editor tool
 	if Engine.editor_hint:
 		_get_spr_node.texture = spr
 
