@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Shaders/Outline.tres" type="Material" id=1]
 [ext_resource path="res://Scripts/Objects/Block.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sprites/shadow.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Block1-Sheet.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -11,12 +12,14 @@ extents = Vector2( 8, 8 )
 material = ExtResource( 1 )
 script = ExtResource( 2 )
 blockType = "Block"
-blockSprite = null
+blockSprite = ExtResource( 4 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
 [node name="Block1" type="Sprite" parent="KinematicBody2D"]
 position = Vector2( 8, 0 )
+texture = ExtResource( 4 )
+hframes = 4
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D/Block1"]
 position = Vector2( -10, 3 )
