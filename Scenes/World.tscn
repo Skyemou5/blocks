@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Sub_Scenes/Block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sub_Scenes/block1/Block.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Grid.gd" type="Script" id=2]
 [ext_resource path="res://Assets/tiles/BlueTilesRound/tileset_BlueTilesRound.tres" type="TileSet" id=3]
 [ext_resource path="res://Assets/tiles/Repeating Tiles/Grid2.png" type="Texture" id=4]
@@ -23,7 +23,10 @@ anchor_mode = 0
 script = ExtResource( 2 )
 
 [node name="Block" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 80, 32 )
+position = Vector2( 64, 16 )
+
+[node name="Block2" parent="World" instance=ExtResource( 1 )]
+position = Vector2( 96, 32 )
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -43,6 +46,7 @@ margin_right = 320.0
 margin_bottom = 160.0
 theme = ExtResource( 6 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
