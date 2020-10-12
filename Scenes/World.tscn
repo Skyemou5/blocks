@@ -24,9 +24,15 @@ script = ExtResource( 2 )
 
 [node name="Block" parent="World" instance=ExtResource( 1 )]
 position = Vector2( 64, 16 )
+blockType = "Block"
+hframes_num = 4
+frame_num = 0
 
 [node name="Block2" parent="World" instance=ExtResource( 1 )]
 position = Vector2( 80, 16 )
+blockType = "Block"
+hframes_num = 4
+frame_num = 0
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1

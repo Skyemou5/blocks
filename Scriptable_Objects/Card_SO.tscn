@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scriptable_Objects/Card_SO.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/themes/Main_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Assets/Sprites/cube1.png" type="Texture" id=3]
+
+[node name="Card_SO" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -249.0
+margin_bottom = -82.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 67.0
+margin_bottom = 79.0
+
+[node name="Class" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 63.0
+margin_bottom = 31.0
+size_flags_vertical = 1
+theme = ExtResource( 2 )
+text = "Class
+"
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 35.0
+margin_right = 63.0
+margin_bottom = 67.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/CenterContainer"]
+margin_left = 23.0
+margin_right = 39.0
+margin_bottom = 32.0
+texture = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 71.0
+margin_right = 63.0
+margin_bottom = 71.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 75.0
+margin_right = 63.0
+margin_bottom = 75.0
