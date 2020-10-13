@@ -26,6 +26,6 @@ func _change_sprite(spr):
 		_get_spr_node.frame = frame_num
 		_get_spr_node.texture = spr
 
-func _process(delta):
+func _process(_delta):
 	_change_sprite(blockSprite)
 	

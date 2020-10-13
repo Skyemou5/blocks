@@ -10,7 +10,7 @@
 [node name="Level" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 176, 80 )
+position = Vector2( 160, 80.0167 )
 z_index = -1
 texture = ExtResource( 4 )
 region_enabled = true
@@ -23,13 +23,7 @@ anchor_mode = 0
 script = ExtResource( 2 )
 
 [node name="Block" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 96, 48 )
-
-[node name="Block2" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 112, 32 )
-
-[node name="Block3" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 64, 16 )
+position = Vector2( 80, 16 )
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -54,8 +48,9 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="Control"]
+margin_left = 0.594604
 margin_top = 112.0
-margin_right = 320.0
+margin_right = 320.595
 margin_bottom = 160.0
 rect_pivot_offset = Vector2( 48, 96 )
 __meta__ = {
