@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "TestClass",
+"language": "GDScript",
+"path": "res://Scenes/classtest.gd"
+}, {
+"base": "Node",
 "class": "base_grid",
 "language": "GDScript",
 "path": "res://Scripts/classes/base_grid.gd"
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://Scripts/Objects/math_tool_sc.gd"
 } ]
 _global_script_class_icons={
+"TestClass": "",
 "base_grid": "",
 "base_obj": "",
 "math_tool": ""

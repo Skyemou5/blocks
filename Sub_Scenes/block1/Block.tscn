@@ -39,6 +39,7 @@ extents = Vector2( 8, 8 )
 material = ExtResource( 1 )
 script = ExtResource( 2 )
 blockSprite = ExtResource( 4 )
+hframes_num = 1
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
@@ -73,3 +74,26 @@ shape = SubResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="MoveTween" type="Tween" parent="."]
+
+[node name="rayDown" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 8, 8 )
+cast_to = Vector2( 0, 16 )
+
+[node name="rayRight" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 8, 8 )
+cast_to = Vector2( 16, 0 )
+
+[node name="rayUp" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 8, 8 )
+cast_to = Vector2( 0, -16 )
+
+[node name="rayLeft" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 8, 8 )
+cast_to = Vector2( -16, 0 )
+[connection signal="tween_completed" from="MoveTween" to="." method="_on_MoveTween_tween_completed"]
