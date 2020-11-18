@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Sub_Scenes/block1/Block.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Grid.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/UI/themes/Main_theme.tres" type="Theme" id=6]
 [ext_resource path="res://Scenes/worldtst.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/Objects/MovementTest.gd" type="Script" id=8]
+[ext_resource path="res://components/moves.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Sprites/Block1.png" type="Texture" id=10]
 
 [node name="Level" type="Node2D"]
@@ -72,3 +73,5 @@ position = Vector2( 96, 32 )
 texture = ExtResource( 10 )
 centered = false
 offset = Vector2( 0, -16 )
+
+[node name="moves" parent="." instance=ExtResource( 9 )]

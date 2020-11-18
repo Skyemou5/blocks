@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/UI/themes/highlightbox.tres" type="Theme" id=1]
+[ext_resource path="res://components/fillgrid.gd" type="Script" id=2]
+[ext_resource path="res://components/Panelclick.tscn" type="PackedScene" id=3]
+
+[node name="moves" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 48.0
+margin_bottom = 48.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+margin_right = 80.0
+margin_bottom = 80.0
+grow_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" parent="Control/GridContainer" instance=ExtResource( 3 )]

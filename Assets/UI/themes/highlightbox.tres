@@ -1,0 +1,4 @@
+[gd_resource type="Theme" format=2]
+
+[resource]
+Panel/colors/panel = Color( 0.878431, 1, 0.0196078, 1 )
