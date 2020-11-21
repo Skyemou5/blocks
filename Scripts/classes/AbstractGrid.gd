@@ -24,12 +24,12 @@ func _ready():
 	
 	if Engine.editor_hint:
 	
-	$grid_visualizer.visible = visualize_grid
+		$grid_visualizer.visible = visualize_grid
 	
-	for x in range(grid_size.x):
-		grid.append([])
-		for y in range(grid_size.y):
-			grid[x].append(EMPTY)
+		for x in range(grid_size.x):
+			grid.append([])
+			for y in range(grid_size.y):
+				grid[x].append(EMPTY)
 
 	# Player
 	# var new_player = Player.instance()

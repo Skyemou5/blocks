@@ -4,7 +4,8 @@ extends Node2D
 onready var grid = get_parent()
 
 func _ready():
-	modulate = Color( 1, 0.2, 0, 0.2 )
+	if Engine.editor_hint:
+		modulate = Color( 1, 0.2, 0, 0.2 )
 
 func _draw():
 	if Engine.editor_hint:
