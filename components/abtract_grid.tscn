@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/classes/AbstractGrid.gd" type="Script" id=1]
+[ext_resource path="res://components/grid_moves/grid_visualizer.gd" type="Script" id=2]
+
+[node name="abstract_grid" type="TileMap"]
+cell_size = Vector2( 16, 16 )
+format = 1
+script = ExtResource( 1 )
+
+[node name="grid_visualizer" type="Node2D" parent="."]
+script = ExtResource( 2 )

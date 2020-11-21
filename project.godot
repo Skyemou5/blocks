@@ -9,15 +9,15 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "TileMap",
+"class": "AbstractGrid",
+"language": "GDScript",
+"path": "res://Scripts/classes/AbstractGrid.gd"
+}, {
 "base": "Node",
 "class": "TestClass",
 "language": "GDScript",
 "path": "res://Scenes/classtest.gd"
-}, {
-"base": "Node",
-"class": "base_grid",
-"language": "GDScript",
-"path": "res://Scripts/classes/base_grid.gd"
 }, {
 "base": "Node2D",
 "class": "base_obj",
@@ -30,8 +30,8 @@ _global_script_classes=[ {
 "path": "res://Scripts/Objects/math_tool_sc.gd"
 } ]
 _global_script_class_icons={
+"AbstractGrid": "",
 "TestClass": "",
-"base_grid": "",
 "base_obj": "",
 "math_tool": ""
 }
@@ -50,6 +50,10 @@ window/size/test_width=960
 window/size/test_height=480
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[gdnative]
+
+singletons=[  ]
 
 [importer_defaults]
 

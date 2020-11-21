@@ -8,11 +8,13 @@
 [ext_resource path="res://Assets/UI/themes/Main_theme.tres" type="Theme" id=6]
 [ext_resource path="res://Scenes/worldtst.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/Objects/MovementTest.gd" type="Script" id=8]
-[ext_resource path="res://components/moves.tscn" type="PackedScene" id=9]
+[ext_resource path="res://components/abtract_grid.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Sprites/Block1.png" type="Texture" id=10]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 7 )
+
+[node name="abstract_grid" parent="." instance=ExtResource( 9 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 160, 80 )
@@ -28,8 +30,7 @@ anchor_mode = 0
 script = ExtResource( 2 )
 
 [node name="Block" parent="World" instance=ExtResource( 1 )]
-position = Vector2( 64, 16 )
-hframes_num = 4
+position = Vector2( 144, 48 )
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -69,9 +70,7 @@ __meta__ = {
 script = ExtResource( 8 )
 
 [node name="Sprite2" type="Sprite" parent="MovementTest"]
-position = Vector2( 96, 32 )
+position = Vector2( 64, 32 )
 texture = ExtResource( 10 )
 centered = false
 offset = Vector2( 0, -16 )
-
-[node name="moves" parent="." instance=ExtResource( 9 )]

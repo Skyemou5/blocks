@@ -1,6 +1,6 @@
 extends Node2D
 
-var grid_cont = get_node("Gridcontainer")
+#var grid_cont = get_node("Gridcontainer")
 
 
 
