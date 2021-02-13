@@ -4,33 +4,46 @@ extends TileMap
 
 
 # Collection of functions to work with a Grid. Stores all its children in the grid array
-enum {EMPTY, PLAYER, OBSTACLE, COLLECTIBLE}
+enum {EMPTY, PLAYER, OBSTACLE, COLLECTIBLE, ID, MOVEABLE}
 
-export onready var visualize_grid: bool = true
-
-
+export(bool) onready var visualizer: bool = true
+export(bool) onready var visualize_grid: bool = true
+export(bool) onready var visualize_cells: bool = true
+export(bool) onready var visualize_ids: bool = true
 
 var tile_size = get_cell_size()
 var half_tile_size = tile_size / 2
 var grid_size = Vector2(cell_quadrant_size, cell_quadrant_size)
 
 var grid = []
+var inputs = {
+	'UI_up' : Vector2.UP
+}
 #onready var Obstacle = preload("res://Obstacle.tscn")
 #onready var Player = preload("res://Player.tscn")
 #const PLAYER_STARTPOS = Vector2(4,4)
 
 
 func _ready():
-	
+	create_grid()
+
+func create_grid():
 	if Engine.editor_hint:
-	
-		$grid_visualizer.visible = visualize_grid
-	
+
 		for x in range(grid_size.x):
 			grid.append([])
 			for y in range(grid_size.y):
 				grid[x].append(EMPTY)
+	else:
+		for x in range(grid_size.x):
+			grid.append([])
+			for y in range(grid_size.y):
+				grid[x].append(EMPTY)
+	print(grid)
 
+func _process(delta):
+	if Engine.editor_hint:
+		$grid_visualizer.visible = visualizer
 	# Player
 	# var new_player = Player.instance()
 	# new_player.position = map_to_world(PLAYER_STARTPOS) + half_tile_size

@@ -5,6 +5,7 @@
 
 [node name="abstract_grid" type="TileMap"]
 cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 20
 format = 1
 script = ExtResource( 1 )
 

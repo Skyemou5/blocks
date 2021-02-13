@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/classes/AbstractGrid.gd"
 }, {
+"base": "Reference",
+"class": "Array2D",
+"language": "GDScript",
+"path": "res://Scripts/classes/Array2D.gd"
+}, {
 "base": "Node",
 "class": "TestClass",
 "language": "GDScript",
@@ -31,6 +36,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "AbstractGrid": "",
+"Array2D": "",
 "TestClass": "",
 "base_obj": "",
 "math_tool": ""

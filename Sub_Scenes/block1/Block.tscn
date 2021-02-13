@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Shaders/Outline.tres" type="Material" id=1]
 [ext_resource path="res://Scripts/Objects/Block.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sprites/shadow.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sprites/Block1-Sheet.png" type="Texture" id=4]
 [ext_resource path="res://components/grid_moves/moves.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Grid.tscn" type="PackedScene" id=6]
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "Idle"
@@ -99,4 +100,6 @@ cast_to = Vector2( -16, 0 )
 
 [node name="moves" parent="." instance=ExtResource( 5 )]
 z_index = -1
+
+[node name="Grid" parent="." instance=ExtResource( 6 )]
 [connection signal="tween_completed" from="MoveTween" to="." method="_on_MoveTween_tween_completed"]
