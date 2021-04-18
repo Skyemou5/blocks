@@ -13,10 +13,11 @@ export(int) var tile_size_pixels: int = 16
 export(int) var rows: int = 20
 export(int) var columns: int = 10
 ####################################
-var cell_size = Vector2(cell_quadrant_size, cell_quadrant_size)
+var cell_size = Vector2(tile_size_pixels, tile_size_pixels)
 var grid_size = Vector2(rows,columns)
 var tile_size: Vector2 = Vector2(tile_size_pixels,tile_size_pixels)
 var half_tile_size = tile_size/2
+var myfnt
 #var font: Font = preload("res://Assets/UI/fonts/main_dynamic_font_data.tres")
 ############
 onready var debugger = $Debug
@@ -37,6 +38,11 @@ func _ready():
 	create_grid(grid,grid_size,cell_size)
 	#print(grid)
 
+func mkfont(fsize):
+	var fnt = DynamicFont.new()
+	fnt.size = fsize
+	fnt.set_font_data(load("res://Assets/UI/fonts/toolfontData.tres"))
+	return fnt
 
 func create_grid(baseObj,grid_size:Vector2 = Vector2(10,10),cell_size:Vector2=Vector2(16,16)):
 	var pos: Vector2
@@ -54,7 +60,9 @@ func create_grid(baseObj,grid_size:Vector2 = Vector2(10,10),cell_size:Vector2=Ve
 
 func draw_grid(griddata):
 	var label = Label.new()
-	var font = label.get_font("")
+	#var font = label.get_font("")
+	#font.size = 10
+	myfnt = mkfont(3)
 	var labelstring: String
 
 	var style_box = StyleBoxFlat.new()
@@ -64,8 +72,8 @@ func draw_grid(griddata):
 				print(i)
 				labelstring = i.id as String
 				#print(cell[0].pos)
-				draw_style_box(style_box,Rect2(i.pos,i.cell_size))
-				draw_string(font,i.center,labelstring,Color.aliceblue)
+				draw_style_box(style_box,Rect2(i.pos,cell_size-Vector2(1,1)))
+				draw_string(myfnt,i.center,labelstring,Color.aliceblue)
 
 func _draw():
 	draw_grid(grid)	
