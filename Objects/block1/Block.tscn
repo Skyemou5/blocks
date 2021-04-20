@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Shaders/Outline.tres" type="Material" id=1]
+[ext_resource path="res://Scripts/Objects/Block.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/shadow.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Block1-Sheet.png" type="Texture" id=4]
+[ext_resource path="res://components/grid_moves/moves.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Grid.tscn" type="PackedScene" id=6]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeStateMachine" id=2]
+states/Idle/node = SubResource( 1 )
+states/Idle/position = Vector2( 549, 140 )
+start_node = "Idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=3]
+
+[sub_resource type="Animation" id=4]
+resource_name = "Idle"
+length = 1.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main_spr:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 8 )
+
+[node name="Block" type="Node2D"]
+material = ExtResource( 1 )
+script = ExtResource( 2 )
+blockSprite = ExtResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="KinematicBody2D"]
+tree_root = SubResource( 2 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
+anims/Idle = SubResource( 4 )
+
+[node name="Main_spr" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 8, 0 )
+texture = ExtResource( 4 )
+hframes = 4
+
+[node name="Shadow_spr" type="Sprite" parent="KinematicBody2D/Main_spr"]
+position = Vector2( -10, 3 )
+z_index = -1
+texture = ExtResource( 3 )
+offset = Vector2( 8, 8 )
+
+[node name="Area2D" type="Area2D" parent="KinematicBody2D"]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/Area2D"]
+position = Vector2( 8, 8 )
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MoveTween" type="Tween" parent="."]
+
+[node name="rayDown" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 8, 8 )
+cast_to = Vector2( 0, 16 )
+
+[node name="rayRight" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 8, 8 )
+cast_to = Vector2( 16, 0 )
+
+[node name="rayUp" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 8, 8 )
+cast_to = Vector2( 0, -16 )
+
+[node name="rayLeft" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 8, 8 )
+cast_to = Vector2( -16, 0 )
+
+[node name="moves" parent="." instance=ExtResource( 5 )]
+z_index = -1
+
+[node name="Grid" parent="." instance=ExtResource( 6 )]
+[connection signal="tween_completed" from="MoveTween" to="." method="_on_MoveTween_tween_completed"]

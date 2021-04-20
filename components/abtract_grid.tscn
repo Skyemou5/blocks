@@ -12,3 +12,4 @@ script = ExtResource( 1 )
 [node name="grid_visualizer" type="Node2D" parent="."]
 modulate = Color( 1, 0.2, 0, 0.2 )
 script = ExtResource( 2 )
+visualize_grid = false

@@ -1,20 +1,17 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Sub_Scenes/block1/Block.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/Grid.gd" type="Script" id=2]
+[ext_resource path="res://Objects/block1/Block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sandbox/Grid.gd" type="Script" id=2]
 [ext_resource path="res://Assets/tiles/BlueTilesRound/tileset_BlueTilesRound.tres" type="TileSet" id=3]
 [ext_resource path="res://Assets/tiles/Repeating Tiles/Grid2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/tiles/Hole/tileset_Hole.tres" type="TileSet" id=5]
 [ext_resource path="res://Assets/UI/themes/Main_theme.tres" type="Theme" id=6]
 [ext_resource path="res://Scenes/worldtst.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/Objects/MovementTest.gd" type="Script" id=8]
-[ext_resource path="res://components/abtract_grid.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Sprites/Block1.png" type="Texture" id=10]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 7 )
-
-[node name="abstract_grid" parent="." instance=ExtResource( 9 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 160, 80 )
@@ -70,7 +67,7 @@ __meta__ = {
 script = ExtResource( 8 )
 
 [node name="Sprite2" type="Sprite" parent="MovementTest"]
-position = Vector2( 64, 32 )
+position = Vector2( 64, 16 )
 texture = ExtResource( 10 )
 centered = false
 offset = Vector2( 0, -16 )
