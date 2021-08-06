@@ -7,6 +7,7 @@ var noise
 
 func _ready():
 	noise = OpenSimplexNoise.new()
+	noise.seed = randi()
 	noise.octaves = 1.0
 	noise.period = 1
 	make_map()

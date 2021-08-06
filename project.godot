@@ -56,10 +56,10 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/width=320
-window/size/height=160
-window/size/test_width=960
-window/size/test_height=480
+window/size/width=368
+window/size/height=240
+window/size/test_width=1080
+window/size/test_height=720
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
